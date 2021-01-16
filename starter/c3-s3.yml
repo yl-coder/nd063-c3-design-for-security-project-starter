@@ -3,14 +3,17 @@ Description:  This template deploys an S3 bucket for storage of recipes.
 Resources:
   S3BucketRecipesFree:
     Type: AWS::S3::Bucket
+    DeletionPolicy : "Retain"
     Properties:
       BucketName: !Join [ "-", [ "cand-c3-free-recipes", !Ref 'AWS::AccountId' ] ]
   S3BucketRecipesSecret:
     Type: AWS::S3::Bucket
+    DeletionPolicy : "Retain"
     Properties:
       BucketName: !Join [ "-", [ "cand-c3-secret-recipes", !Ref 'AWS::AccountId' ] ]
   S3BucketVPCFlowLogs:
       Type: AWS::S3::Bucket
+      DeletionPolicy : "Retain"
       Properties:
         BucketName: !Join [ "-", [ "cand-c3-vpc-flow-logs", !Ref 'AWS::AccountId' ] ]
 

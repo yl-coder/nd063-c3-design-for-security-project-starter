@@ -1,3 +1,9 @@
 # Describe GuardDuty findings that were detected related to the brute force attack
 
 # Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+
+GuardDuty analyzes billions of events across your AWS accounts from AWS CloudTrail Management Events (AWS user and API activity in your accounts), AWS CloudTrail S3 Data Events (Amazon S3 activity), Amazon VPC Flow Logs (network traffic data), and DNS Logs (name query patterns).
+
+All the events information could be pipe into an stream processor(I suspect is Kinesis) and then perform some sort of aggregation with respect of time period (15mins, 1hr, etc)
+If the result of the 15mins aggregation has high level of ssh attempts, it will trigger a particular events to update threat detected.
+

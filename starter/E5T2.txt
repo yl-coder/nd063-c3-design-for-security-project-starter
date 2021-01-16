@@ -1,13 +1,27 @@
 # Identify tools that will allow you to do the following:
 
 ## Scan infrastructure as code templates
+Regula : Scan the iaas code for any compliance issues.
 
 ### Example vulnerability
+
+For e.g. making sure ssh ports are not open, etc
+
 
 ##Scan AMI’s or containers for OS vulnerabilities
 
+Scan docker image for containers using ECR image scanning on demand and also regularly
+
 ### Example vulnerability
+
+For e.g. any os package vulnerabilities, etc. For e.g. curl vulnerabilities
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
 
+Aws Inspector
+
 ### Example vulnerability
+
+Aws Inspector checks for security exposures and vulerabilities in your EC2 instance.
+Some vulnerabilities are like opened ports for RDP, SSH, and also some port that are not supposed to open for application server. For e.g sftp port, etc
+

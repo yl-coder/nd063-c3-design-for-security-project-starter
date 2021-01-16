@@ -2,4 +2,13 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+1) Put application web instance into private subnet
+2) Don't open ssh port, use Aws System Manager to access
+3) Immutable ami image, use packer to make any changes to make new ami image. Since changes is not needed, ssh is not needed.
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+1) Immutable ami image, use packer to make any changes to make new ami image. Since changes is not needed, ssh is not needed, thus it can never be compromised.
+2)
+
+

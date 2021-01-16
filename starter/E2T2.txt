@@ -1,3 +1,24 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
 Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+### securityhub-s3-bucket-logging-enabled-a2f1bed8
+
+To enable logging for s3 buckets.
+S3 > Choose Bucket > Properties > Set Server access logging to on
+
+To enable bucket versioning for s3 buckets
+S3 > Choose Bucket > Properties > Set Bucket Versioning to enabled
+
+### 4.1: Findings details - Network Reachability-1.1
+
+Alot of ports are open on the web instance.
+We will need to tighten the security group.
+Currently there's an security group entry that allows all incoming port.
+All	All	0.0.0.0/0	WebAppSG
+Additionally, We will need to perform hardening on your web instance. Recommended way is to use packer and run hardening scripts when baking the ami image.
+
+
+### CIS Foundation benchmark issues
+
+To perform hardening on your web instance. Recommended way is to use packer and run hardening scripts when baking the ami image.
